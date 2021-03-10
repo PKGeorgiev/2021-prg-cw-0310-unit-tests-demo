@@ -10,10 +10,39 @@ namespace UnitTestrbtopalska18
 	{
 	public:
 		
-		TEST_METHOD(TestMethod1)
+		//14 => true
+		//8  => false
+		//10 => true
+		//20 => true
+		//21 => false
+		TEST_METHOD(ShouldReturnTrueIfArgumentIsInRange)
+		{
+
+			//AAA
+
+			//Arrange
+			bool result;
+			int argument = 17;
+
+			//Act
+			result = isNumberInRange(17);
+
+			//Assert
+			Assert::AreEqual(true, result);
+		}
+		TEST_METHOD(ShouldReturnFalseIsArgumentIsOutRange)
 		{
 			bool result;
-			result = isNumberInRange(17);
+			int arg = 8;
+			result = isNumberInRange(arg);
+			Assert::AreEqual(false, result);
+		}
+		TEST_METHOD(ShouldNotReturnTrueIfArgumentIsOnTheBorder)
+		{
+			bool result;
+			int arg = 20;
+			result = isNumberInRange(arg);
+			Assert::AreNotEqual(false, result);
 		}
 	};
 }
