@@ -10,8 +10,17 @@ namespace UnitTestsZAIvanov18
 	{
 	public:
 		
-		TEST_METHOD(TestMethod1)
+		TEST_METHOD(ShouldReturnIfArgumentIsInRange)
 		{
+			//AAA
+			//Arrange
+			bool result;
+			int argument = 17;
+
+			//Act
+			result = isNumberInRange(17);
+			//Assert
+			Assert::AreEqual(true, result);
 		}
 	};
 }
