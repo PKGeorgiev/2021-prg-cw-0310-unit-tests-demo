@@ -10,3 +10,8 @@ bool isNumberInRange(int number)
 	// 21 => false
 	return number > 10 && number <= 20;
 }
+
+int sumNumbers(int numberOne, int numberTwo)
+{
+	return numberOne + numberTwo;
+}
