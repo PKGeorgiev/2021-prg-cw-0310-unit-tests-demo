@@ -9,7 +9,7 @@ namespace UnitTestbbkanev18
 	{
 	public:
 		
-		TEST_METHOD(TestMethod1)
+		TEST_METHOD(ShouldReturnTrueIfArgumentIsInRange)
 		{
 			// (10; 20]
 			// 14 => true
@@ -17,9 +17,21 @@ namespace UnitTestbbkanev18
 			// 10 => false
 			// 20 => true
 			// 21 => false
-			bool result;
+			
+			// AAA
 
+			// Arrange
+			bool result;
+			int argument = 17;
+
+
+			// Act
 			result = isNumberInRange(17);
+
+
+			// Assert
+			Assert::AreEqual(true, result);
+			
 
 		}
 	};
