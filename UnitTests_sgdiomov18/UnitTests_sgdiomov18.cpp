@@ -10,9 +10,12 @@ namespace UnitTestssgdiomov18
 	{
 	public:
 		
-		TEST_METHOD(TestMethod1)
+		TEST_METHOD(ShouldReturnTrueIfArgumentIsInRange)
 		{
+			bool result;
+			int argument = 17;
 			int result = isNumberInRange(17);
+			Assert::AreEqual(true, result);
 		}
 	};
 }
