@@ -10,10 +10,33 @@ namespace UnitTestssatodorov18
 	{
 	public:
 		
-		TEST_METHOD(TestMethod1)
+		TEST_METHOD(ShouldReturnTrueIfArgumentIsInRange)
 		{
+			// AAA
+			
+			// Arrange
 			bool result;
-			result = isNumberInRange(17);
+			int argument = 14;
+
+			// Act
+			result = isNumberInRange(argument);
+
+			// Assert
+			Assert::AreEqual(true, result);
+		}
+		TEST_METHOD(ShouldReturnFalseIfArgumentIsOutOfRange)
+		{
+			// AAA
+
+			// Arrange
+			bool result;
+			int arg = 8;
+
+			// Act
+			result = isNumberInRange(arg);
+
+			// Assert
+			Assert::AreEqual(false, result);
 		}
 	};
 }
